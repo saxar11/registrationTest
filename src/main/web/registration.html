@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Registration</title>
+
+        <style>
+         .A {
+            width: 50%;
+            height: 50%;
+            overflow: auto;
+            margin: auto;
+            position: absolute;
+             }
+          </style>
+    </head>
+    <body>
+        <div class="A">
+
+            <section>
+                <form action="registration" method="post">
+                    <p>
+                    <label for="nick"></label>
+                    <input type="label" name="nick" id="nick" placeholder="Generated nick name">
+                    </p>
+                    <p>
+                    <input type="submit" name="generator" value="Generate next nick name!">
+                    </p>
+                   <p>
+                    <label for="email"></label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    </p>
+                    <p>
+                    <label for="pass"></label>
+                    <input type="password" name="pass" id="pass" placeholder="Enter Password">
+                     </p>
+
+                    <p>
+                    <label for="repass"></label>
+                    <input type="password" name="pass" id="repass" placeholder="Repeat Password">
+                    </p>
+
+                    <p>
+                    <input type="submit" name="submit" value="Register">
+                    </p>
+
+                    <p>
+                    <input type="button" name="button" value="Cancel">
+                    </p>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
