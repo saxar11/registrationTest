@@ -21,5 +21,4 @@ public interface UserDAO {
 	// method return list of all exist users in database
 	public List <User> allUsers() throws SQLException;
 
-
 }
