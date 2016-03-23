@@ -9,11 +9,17 @@ import java.util.List;
 import ua.sakharevich.db.pojo.User;
 import ua.sakharevich.db.dao.*;
 
+/**
+ * This is implementation of UserDAO interface. This class contain all specific MySQL code
+ * and SQL statements.
+ */
 public class MysqlUserDAO implements UserDAO {
 
 	private Connection connection;
-	private User user = new User();
 
+	/**
+	 *  @param connection of mysql data base
+	 */
 	public MysqlUserDAO(Connection connection) {
 		this.connection = connection;
 	}
@@ -26,7 +32,7 @@ public class MysqlUserDAO implements UserDAO {
 
 	@Override
 	public User readUser(int key) throws SQLException {
-
+		User user = new User();
 		//create sql statement
 		String sql = "SELECT * FROM users.user WHERE id = ?;";
 		PreparedStatement stm = connection.prepareStatement(sql);
@@ -61,11 +67,6 @@ public class MysqlUserDAO implements UserDAO {
 	public List<User> allUsers() throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public String toString() {
-		return this.user.toString();
 	}
 
 }
