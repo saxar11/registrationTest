@@ -9,9 +9,8 @@ import java.sql.SQLException;
 public abstract class DAOFactory {
 
 	/**
-	 * There will be a mathod for every DAO that can be create.
-	 * The concrete factories will have to
-	 // implement these methods.
+	 * There will be a method for every DAO that can be create.
+	 * The concrete factories will have to implement these methods.
 	 * @return object of connection to MySql data base
 	 * @throws SQLException {link java.sql.SQLException}
 	 */
@@ -24,7 +23,7 @@ public abstract class DAOFactory {
 	 * @return pojo user
 	 * @throws SQLException {link java.sql.SQLException}
 	 */
-	public abstract UserDAO getUser() throws SQLException;
+	abstract UserDAO getUser() throws SQLException;
 
 }
 
