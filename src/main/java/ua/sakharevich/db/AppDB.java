@@ -1,22 +1,26 @@
 package ua.sakharevich.db;
 
-import java.sql.SQLException;
 import ua.sakharevich.db.dao.DAOFactory;
-import ua.sakharevich.db.dao.UserDAO;
+import ua.sakharevich.db.dao.UserManage;
+import ua.sakharevich.db.mysql.MysqlUserManage;
 import ua.sakharevich.db.mysql.MysqlDAOFactory;
 
+/**
+ * Test Class.
+ * @throws Exception of connection to db
+ */
 public class AppDB {
-	public static void main(String args[]) throws SQLException {
-		DAOFactory daoFactory = new MysqlDAOFactory();
+	public static void main(String[] args) throws Exception {
+		DAOFactory daoFactory = DAOFactory.getDaoFactory();
+		UserManage user = new MysqlUserManage(daoFactory.getConnection());
 		try {
-		 UserDAO userdao = daoFactory.getUser();
-		 userdao.readUser(2);
- 		 System.out.println(userdao.toString());
-		 userdao.readUser(1);
-		 System.out.println(userdao.toString());
+		 user.readUser(2);
+ 		 System.out.println(user.toString());
+		 user.readUser(1);
+		 System.out.println(user.toString());
 		}
-		catch (SQLException e) {
-		 e.printStackTrace();
+		catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

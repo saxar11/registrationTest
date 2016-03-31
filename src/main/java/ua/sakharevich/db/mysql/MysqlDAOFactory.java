@@ -1,11 +1,9 @@
 package ua.sakharevich.db.mysql;
 
 import ua.sakharevich.db.dao.DAOFactory;
-import ua.sakharevich.db.dao.UserDAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /**
  * This is realisation of MySQL DAO.
@@ -23,19 +21,10 @@ public class MysqlDAOFactory extends DAOFactory {
 	/**
 	 * Create connection to MySQL data base.
 	 * @return connection to data base
-	 * @throws SQLException {link java.sql.SQLException}
+	 * @throws Exception {link java.sql.SQLException}
 	 */
-	public Connection getConnection() throws SQLException {
+	public Connection getConnection() throws Exception {
 		return DriverManager.getConnection(url, user, password);
-	}
-
-	/**
-	 * Method return user.
-	 * @return  user of MySQL data base
-	 * @throws SQLException {link java.sql.SQLException}
-	 */
-	public UserDAO getUser() throws SQLException {
-		return new MysqlUserDAO(this.getConnection());
 	}
 
 	/**
