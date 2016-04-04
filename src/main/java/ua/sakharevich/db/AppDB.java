@@ -11,6 +11,7 @@ import ua.sakharevich.db.mysql.MysqlDAOFactory;
  */
 public class AppDB {
 	public static void main(String[] args) throws Exception {
+
 		DAOFactory daoFactory = DAOFactory.getDaoFactory();
 		UserManage user = new MysqlUserManage(daoFactory.getConnection());
 		try {
