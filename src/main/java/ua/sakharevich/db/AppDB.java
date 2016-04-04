@@ -3,7 +3,6 @@ package ua.sakharevich.db;
 import ua.sakharevich.db.dao.DAOFactory;
 import ua.sakharevich.db.dao.UserManage;
 import ua.sakharevich.db.mysql.MysqlUserManage;
-import ua.sakharevich.db.mysql.MysqlDAOFactory;
 
 /**
  * Test Class.
@@ -15,7 +14,7 @@ public class AppDB {
 		DAOFactory daoFactory = DAOFactory.getDaoFactory();
 		UserManage user = new MysqlUserManage(daoFactory.getConnection());
 		try {
-			
+
 		 user.readUser(2);
  		 System.out.println(user.toString());
 		 user.readUser(1);

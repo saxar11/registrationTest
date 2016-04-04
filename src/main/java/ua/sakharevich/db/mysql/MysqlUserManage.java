@@ -23,6 +23,7 @@ public class MysqlUserManage extends UserManage {
      */
     public MysqlUserManage(Connection connection) {
         super(connection);
+        this.connection = connection;
     }
 
     /**

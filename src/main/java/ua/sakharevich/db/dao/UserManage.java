@@ -10,14 +10,12 @@ import java.util.List;
  * This Class make users object.
  */
 public abstract class UserManage {
-       private Connection connection;
+
     /**
      *This construct create user object.
      * @param connection to data base
      */
-    public UserManage(Connection connection) {
-        this.connection = connection;
-    }
+    public UserManage(Connection connection) {}
     /**
      * This method create new user in data base.
      * @return pojo user
