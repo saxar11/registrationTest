@@ -11,7 +11,6 @@ import java.sql.DriverManager;
  */
 public class MysqlDAOFactory extends DAOFactory {
 
-
 	// settings for connection
 	private String user = "root";
 	private String password = "root";
