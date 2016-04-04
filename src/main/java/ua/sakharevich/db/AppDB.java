@@ -15,6 +15,7 @@ public class AppDB {
 		DAOFactory daoFactory = DAOFactory.getDaoFactory();
 		UserManage user = new MysqlUserManage(daoFactory.getConnection());
 		try {
+			
 		 user.readUser(2);
  		 System.out.println(user.toString());
 		 user.readUser(1);
