@@ -7,21 +7,17 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * This Class make users object.
+ * This is users maker interface.
  */
-public abstract class UserManage {
+public interface UserManage {
 
-    /**
-     *This construct create user object.
-     * @param connection to data base
-     */
-    public UserManage(Connection connection) {}
+
     /**
      * This method create new user in data base.
      * @return pojo user
      * @throws Exception {link java.sql.SQLException}
      */
-    public abstract User createUser() throws Exception;
+    User createUser() throws Exception;
 
     /**
      * Method return already created obj User.
@@ -29,7 +25,7 @@ public abstract class UserManage {
      * @return user
      * @throws Exception {link java.sql.SQLException}
      */
-    public abstract User readUser(int key) throws Exception;
+    User readUser(int key) throws Exception;
 
 
 
@@ -39,7 +35,7 @@ public abstract class UserManage {
      * @return true if user was updated
      * @throws Exception {link java.sql.SQLException}
      */
-    public abstract boolean updateUser(User user) throws Exception;
+    boolean updateUser(User user) throws Exception;
 
     /**
      * Delete user from database.
@@ -47,7 +43,7 @@ public abstract class UserManage {
      * @return true is user was delete, and false otherwise
      * @throws Exception {link java.sql.SQLException}
      */
-    public abstract boolean deleteUser(User user) throws Exception;;
+    boolean deleteUser(User user) throws Exception;;
 
     // method return list of all exist users in database
 
@@ -56,5 +52,5 @@ public abstract class UserManage {
      * @return List <User>
      * @throws SQLException {link java.sql.SQLException}
      */
-    public abstract List<User> allUsers() throws SQLException;
+    List<User> allUsers() throws SQLException;
 }

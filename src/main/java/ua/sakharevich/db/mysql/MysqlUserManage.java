@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * This class define user creation from MySQL data base.
  */
-public class MysqlUserManage extends UserManage {
+public class MysqlUserManage implements UserManage {
     private Connection connection;
 
     /**
@@ -22,8 +22,7 @@ public class MysqlUserManage extends UserManage {
      * @param connection to data base
      */
     public MysqlUserManage(Connection connection) {
-        super(connection);
-        this.connection = connection;
+           this.connection = connection;
     }
 
     /**
@@ -97,4 +96,5 @@ public class MysqlUserManage extends UserManage {
     public List<User> allUsers() throws SQLException {
         return null;
     }
+
 }
