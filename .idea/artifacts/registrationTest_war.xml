@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="registrationTest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Registration-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="registrationTest:war exploded" />
+    </root>
+  </artifact>
+</component>
